@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./database:/app/database  # Lưu memoris.db ra ngoài container
+    env_file:
+      - .env
+
+
